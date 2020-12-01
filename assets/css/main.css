@@ -1,7 +1,10 @@
+/* css reset  */
+
 html,
 body,
 div,
 span,
+applet,
 object,
 iframe,
 h1,
@@ -13,8 +16,11 @@ h6,
 p,
 blockquote,
 pre,
+a,
 abbr,
+acronym,
 address,
+big,
 cite,
 code,
 del,
@@ -24,14 +30,19 @@ img,
 ins,
 kbd,
 q,
+s,
 samp,
 small,
+strike,
 strong,
 sub,
 sup,
+tt,
 var,
 b,
+u,
 i,
+center,
 dl,
 dt,
 dd,
@@ -54,13 +65,16 @@ article,
 aside,
 canvas,
 details,
-figcaption,
+embed,
 figure,
+figcaption,
 footer,
 header,
 hgroup,
 menu,
 nav,
+output,
+ruby,
 section,
 summary,
 time,
@@ -70,14 +84,9 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
   font-size: 100%;
+  font: inherit;
   vertical-align: baseline;
-  background: transparent;
-}
-
-body {
-  line-height: 1;
 }
 
 article,
@@ -93,16 +102,21 @@ nav,
 section {
   display: block;
 }
-
-nav ul {
-  list-style: none;
+body {
+  line-height: 1;
 }
 
+a:visited {
+  color: none;
+}
+ol,
+ul {
+  list-style: none;
+}
 blockquote,
 q {
   quotes: none;
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
@@ -110,108 +124,60 @@ q:after {
   content: "";
   content: none;
 }
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
-}
-
-/* change colours to suit your needs */
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title],
-dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* change border colour to suit your needs */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input,
-select {
-  vertical-align: middle;
-}
-
+/* css starts here */
 body {
-  background-color: #fff;
-  padding: 1.5% 2%;
   font-family: "Roboto", sans-serif;
+  background-color: #a8dadc;
+  color: #073b4c;
+  box-sizing: border-box;
 }
-
-.navbar {
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-end;
-  align-content: center;
-  align-content: space-between;
-}
-
-.person div a {
-  color: #000;
-  font-size: 200%;
-  text-decoration: none;
-  font-family: "Lobster", cursive;
-  text-transform: uppercase;
-  margin: 0.7vw;
-  animation: 1s easeInExpo;
-  flex-direction: row;
-  display: block;
-  padding: 8px;
-  background-color: #dddddd;
-}
-
-
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  flex: 1;
 }
 
-li {
-  display: inline;
+.nav-right {
+  display: flex;
 }
 
-li div {
-	display: inline;
-	float: left;
-}
-
-.person div a:hover {
-  color: rgb(50, 20, 50);
-  font-size: 210%;
-  text-decoration: underline;
+#homepage a,
+.person div a {
+  text-decoration: none;
   text-transform: uppercase;
+  font-size: 1.7em;
+  font-family: "Roboto Slab", serif;
+  padding: 0.4rem;
+  margin: 0.2rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #0f4c5c;
+  border: 1px #0f4c5c solid;
+  border-radius: 100%;
+  animation: 1s ease-in-out;
+  
+}
+
+a:visited {
+  color: #f1faee;
+}
+
+.person div a:hover,
+#homepage a:hover {
+  color: #02c39a;
+}
+
+
+picture img {
+  max-width: 100%;
+  image-resolution: initial;
 }
